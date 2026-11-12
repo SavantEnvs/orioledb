@@ -1,0 +1,10 @@
+project: savantenvs/orioledb
+target: fuzz_wal_container
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_wal_container/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_wal_container
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_wal_container/fuzz_wal_container.dict

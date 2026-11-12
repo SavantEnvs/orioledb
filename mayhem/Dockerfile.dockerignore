@@ -1,0 +1,12 @@
+# Used instead of the repo's .dockerignore for the commit image (BuildKit picks
+# <Dockerfile>.dockerignore). Upstream's drops .git, test/ and scripts needed here: the image
+# must carry the full history (the grader reads it) and test/ (pg_regress inputs).
+**/*.o
+**/*.a
+**/*.so
+**/__pycache__/
+test/tmp_check/
+test/results/
+.DS_Store
+*.swp
+*~
